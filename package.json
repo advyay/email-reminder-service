@@ -1,0 +1,29 @@
+{
+  "name": "event-reminder-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+  "build": "tsc -p tsconfig.json",
+  "start": "node --enable-source-maps dist/index.js",
+  "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node-cron": "^3.0.11",
+    "dayjs": "^1.11.19",
+    "dotenv": "^17.2.3",
+    "mongodb": "^6.20.0",
+    "node-cron": "^4.2.1",
+    "ts-node": "^10.9.2",
+    "twilio": "^5.10.4",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "nodemon": "^3.1.10"
+  }
+}
