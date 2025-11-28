@@ -37,6 +37,8 @@ export const sendUpcomingReminders = async () => {
     return;
   }
 
+  console.log(`📅 Found ${events.length} events. Processing reminders...`);
+
   await Promise.all(
     events.map(async (ev) => {
       try {
