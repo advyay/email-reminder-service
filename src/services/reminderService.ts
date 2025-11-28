@@ -76,6 +76,10 @@ export const sendUpcomingReminders = async () => {
         let todayUsers: ObjectId[] = [];
         let tomorrowUsers: ObjectId[] = [];
 
+        console.log(
+          `🔔 Event "${ev.title}": Found ${eventEnquiries.length} registrations to remind.`
+        );
+
         await Promise.all(
           eventEnquiries.map(async (eq) => {
             try {
