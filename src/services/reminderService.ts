@@ -76,6 +76,7 @@ export const sendUpcomingReminders = async () => {
         let todayUsers: ObjectId[] = [];
         let tomorrowUsers: ObjectId[] = [];
 
+        console.log(oneHourLaterTime);
         console.log(
           `🔔 Event "${ev.title}": Found ${eventEnquiries.length} registrations to remind.`
         );
@@ -84,7 +85,7 @@ export const sendUpcomingReminders = async () => {
           eventEnquiries.map(async (eq) => {
             try {
               await sendWMessage({
-                to: eq.phone,
+                to: eq.countryCode + eq.phone,
                 contendSid: twTemp.reminder,
                 body: {
                   1: `${eq.fName} ${eq.lName || ""}`,
