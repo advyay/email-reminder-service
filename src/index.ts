@@ -4,7 +4,7 @@ import { sendUpcomingReminders } from "./services/reminderService";
 console.log("🕒 Event Reminder Service started...");
 
 // Run every 10 minutes (you can adjust as needed)
-cron.schedule("*/10 * * * *", async () => {
+cron.schedule("*/2 * * * *", async () => {
   console.log("🔔 Checking for upcoming events...");
   try {
     await sendUpcomingReminders();
