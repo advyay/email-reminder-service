@@ -96,6 +96,11 @@ export const sendUpcomingReminders = async () => {
                   8: ev.title,
                 },
               });
+              console.log(
+                `📱 Reminder sent to ${eq.fName} ${eq.lName || ""} for event "${
+                  ev.title
+                }" on ${eq.date} at ${eq.startTime}.`
+              );
 
               if (eq.date === todayDate) {
                 todayUsers.push(eq._id);
